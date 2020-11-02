@@ -1,14 +1,16 @@
-package abbas.samih.samihtasky2020;
+package abbas.samih.samihtasky2020.MyUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class SignUpActivity extends AppCompatActivity {
+import abbas.samih.samihtasky2020.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_main);
     }
 }
