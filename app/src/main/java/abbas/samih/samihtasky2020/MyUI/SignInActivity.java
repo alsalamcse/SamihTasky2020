@@ -23,10 +23,23 @@ public class SignInActivity extends AppCompatActivity {
     //2.
     private EditText etEmail,etPassWord;
     private Button btnLogIN,btnSignUp;
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        //7. check if I signed in before
+        FirebaseAuth auth=FirebaseAuth.getInstance();
+        if(auth.getCurrentUser()!=null)// user signed in before
+        {
+            Intent i=new Intent(getBaseContext(),MainActivity.class);
+            finish();
+            startActivity(i);
+        }
 //3.
         etEmail=findViewById(R.id .etEmail) ;
         etPassWord=findViewById(R.id .etPassWord) ;
